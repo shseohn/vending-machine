@@ -98,7 +98,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Milk 500</string>
+    <string>Milk 150</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pbTea">
