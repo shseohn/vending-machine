@@ -11,11 +11,11 @@ Widget::Widget(QWidget *parent)
     if (money < 100) {
         ui->pbCoffee->setEnabled(false);
     }
+    if (money < 150) {
+        ui->pbMilk->setEnabled(false);
+    }
     if (money < 200) {
         ui->pbTea->setEnabled(false);
-    }
-    if (money < 500) {
-        ui->pbMilk->setEnabled(false);
     }
 }
 
@@ -34,8 +34,8 @@ void Widget::increaseMoney(int value)
     ui->lcdNumber->display(money);
 
     ui->pbCoffee->setEnabled(money >= 100);
+    ui->pbMilk->setEnabled(money >= 150);
     ui->pbTea->setEnabled(money >= 200);
-    ui->pbMilk->setEnabled(money >= 500);
 }
 void Widget::on_pb10_clicked()
 {
@@ -68,7 +68,7 @@ void Widget::on_pbCoffee_clicked()
 
 void Widget::on_pbMilk_clicked()
 {
-    increaseMoney(-500);
+    increaseMoney(-150);
 }
 
 
